@@ -2,7 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import AddUser from './components/Users/AddUser';
 import UsersList from './components/Users/UsersList';
-import React,{useState} from 'react';
+import React,{useState,Fragment} from 'react';
 
 function App() {
   const [usersList,setUserslist]=useState([]);
@@ -13,10 +13,10 @@ function App() {
 
   }
   return (
-    <div >
+    <React.Fragment>
      <AddUser onAddUser={addUserHandler}/>
      <UsersList users={usersList}/>
-    </div>
+    </React.Fragment>
   );
 }
 
